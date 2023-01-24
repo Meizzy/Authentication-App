@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1011972020341",
+    "project_id": "authentication-a243e",
+    "storage_bucket": "authentication-a243e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011972020341:android:aa274f4b6aa047286cc03c",
+        "android_client_info": {
+          "package_name": "burujiyaseer.example.authenticationapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1011972020341-p1e4rsm43rbfmfemam5fd800gpt3mqg4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATXScFpW6n4g4Kw6IbqD7JnCsvJx84PUQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1011972020341-p1e4rsm43rbfmfemam5fd800gpt3mqg4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
