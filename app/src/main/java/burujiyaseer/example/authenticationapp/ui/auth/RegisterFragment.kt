@@ -14,13 +14,15 @@ import burujiyaseer.example.authenticationapp.databinding.FragmentRegisterBindin
 import burujiyaseer.example.authenticationapp.ui.base.BaseFragment
 import burujiyaseer.example.authenticationapp.ui.enable
 import burujiyaseer.example.authenticationapp.ui.visible
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
 private const val TAG = "RegisterFragment"
+@AndroidEntryPoint
 class RegisterFragment : BaseFragment<FragmentRegisterBinding>(
     FragmentRegisterBinding::inflate
 ) {
-    private val viewModel by viewModels<AuthViewModel>()
+    private val viewModel: AuthViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -40,6 +42,7 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>(
                         findNavController().navigate(R.id.action_registrationFragment_to_homeFragment)
                     }
                     is Resource.Failure -> {
+                        Log.d(TAG, "failed to register with ${it.exception.printStackTrace()}")
                         Toast.makeText(context,it.exception.message, Toast.LENGTH_LONG).show()
                     }
                     Resource.Loading -> binding.progressbar.visible(true)

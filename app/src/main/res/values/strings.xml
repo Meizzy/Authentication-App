@@ -11,4 +11,8 @@
     <string name="already_have_an_account_login_now">Already have an account? <b>Login Now</b></string>
     <string name="name">name</string>
     <string name="name_placeholder">John Doe</string>
+    <string name="email_placeholder">Email:</string>
+    <string name="name_place_holder">Name: </string>
+    <string name="id">ID</string>
+    <string name="logout">Logout</string>
 </resources>

@@ -28,7 +28,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(
             viewModel.logout()
             findNavController().apply {
                 navigate(R.id.action_homeFragment_to_loginFragment)
-                popBackStack()
+//                popBackStack()
             }
         }
     }
