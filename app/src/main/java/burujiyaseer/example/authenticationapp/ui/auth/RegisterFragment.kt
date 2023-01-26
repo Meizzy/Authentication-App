@@ -39,7 +39,10 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>(
                 binding.progressbar.visible(it is Resource.Loading)
                 when (it) {
                     is Resource.Success -> {
-                        findNavController().navigate(R.id.action_registrationFragment_to_homeFragment)
+                        findNavController().apply {
+                            navigate(R.id.action_registrationFragment_to_homeFragment)
+                            popBackStack()
+                        }
                     }
                     is Resource.Failure -> {
                         Log.d(TAG, "failed to register with ${it.exception.printStackTrace()}")

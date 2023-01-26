@@ -15,7 +15,6 @@ import dagger.hilt.android.AndroidEntryPoint
 class HomeFragment : BaseFragment<FragmentHomeBinding>(
     FragmentHomeBinding::inflate
 ) {
-
     private val viewModel by viewModels<AuthViewModel>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -26,12 +25,12 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(
 
         binding.buttonLogout.setOnClickListener {
             viewModel.logout()
-            findNavController().apply {
-                navigate(R.id.action_homeFragment_to_loginFragment)
-//                popBackStack()
-            }
+            findNavController().navigate(R.id.action_homeFragment_to_loginFragment)
         }
     }
+
+
+
 
     private fun updateUI(user: FirebaseUser?) {
         with(binding) {

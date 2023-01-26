@@ -12,5 +12,4 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_auth)
 //        val navController = findNavController(R.id.nav_auth)
     }
-
 }
